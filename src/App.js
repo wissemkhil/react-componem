@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Fragment } from "react";
+import Address from "./Component/Profil/Address";
+import UserName from "./Component/Profil/UserName";
+import ProfilePhoto from "./Component/Profil/ProfilePhoto";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <div className="card-container">
+        <ProfilePhoto />
+        <h3>
+          {" "}
+          <Address />
+        </h3>
+        <h2>
+          <UserName />
+        </h2>
+      </div>
+    </Fragment>
   );
 }
 
